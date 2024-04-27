@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        .container{
+            text-align: center;
+            margin:0 auto;
+            color:blue
+        }
+        #inputBtn{
+            width: 50%;
+            height: 50px;
+            border:1pxsolid blue;
+            background-color: brown;
+            font-size:30px;
+            font-family:50px;
+        }
+        #searchBtn{
+            width:50px;
+            height:30px;
+            margin:10px;
+            color:black;
+            background-color: aqua;
+            font-weight: 20px;
+            font-size:20px;
+        }
+        ul>li{
+            width:30%;
+            height: 50px;
+            color:black;
+            background-color: green;
+            font-size: 30px;
+        }  
+        .rounded{width: 300px;
+            height: 300px;
+
+        }    
+    </style>
+</head>
+<body>
+   <div class="container">
+    <img src="../todolist/html.jpg" class="rounded" alt="...">
+
+    <h1>Todo List</h1>
+    <input type="text" id="inputBtn" value=""/>
+    <br/>
+    <input type="button" value="Add New Item" id="searchBtn" onclick="addNewTodoList()"/>
+    <ul id="result"></ul>
+   </div>
+   <script>
+    function addNewTodoList() {
+var inputBtn = document.getElementById("inputBtn");
+var ul = document.getElementById("result")
+var li = document.createElement("li");
+li.innerHTML = inputBtn.value;
+ul.appendChild(li)
+
+    }
+   </script>
+</body>
+</html>
